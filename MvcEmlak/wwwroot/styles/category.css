@@ -397,25 +397,6 @@ section
 {
 	color: #2fce98;
 }
-.main_nav
-{
-	margin-left: 111px;
-}
-.main_nav ul li:not(:last-of-type)
-{
-	margin-right: 49px;
-}
-.main_nav ul li a
-{
-	font-size: 20px;
-	color: #2e2e2e;
-	font-weight: 400;
-}
-.main_nav ul li.active a,
-.main_nav ul li a:hover
-{
-	color: #2fce98;
-}
 .header_search
 {
 	margin-right: 65px;
@@ -1169,39 +1150,6 @@ section
 .product_button:hover svg polygon
 {
 	fill: #FFFFFF;
-}
-.page_nav_row
-{
-	margin-top: 20px;
-}
-.page_nav ul li
-{
-	width: 32px;
-	height: 32px;
-	border: solid 2px transparent;
-	text-align: center;
-	-webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
-}
-.page_nav ul li:not(:last-of-type)
-{
-	margin-right: 8px;
-}
-.page_nav ul li.active,
-.page_nav ul li:hover
-{
-	border: solid 2px #2fce98;
-	border-radius: 2px;
-}
-.page_nav ul li a
-{
-	display: block;
-	font-size: 14px;
-	color: #2fce98;
-	line-height: 28px;
 }
 
 /*********************************

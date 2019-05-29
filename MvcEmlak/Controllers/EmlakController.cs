@@ -43,9 +43,27 @@ namespace MvcEmlak.Controllers
             return View(emlak);
         }
 
+        public async Task<IActionResult> Search(string ad)
+        {
+            var emlaks = from m in _context.Emlak select m;
+            if (!String.IsNullOrEmpty(ad))
+            {
+                ViewData["ad"] = ad;
+                return View(await emlaks.Where(emlak => emlak.Name.Contains(ad) || emlak.Type.Contains(ad) || emlak.Category.Contains(ad)).ToListAsync());
+            }
+
+            return View(await _context.Emlak.ToListAsync());
+        }
+
         // GET: Emlak/Create
         public IActionResult Create()
         {
+            var userId = Request.Cookies["userID"];
+            if (String.IsNullOrEmpty(userId))
+            {
+                return RedirectToAction("Register", "Auth");
+
+            }
             return View();
         }
 

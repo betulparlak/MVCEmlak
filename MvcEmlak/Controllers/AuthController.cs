@@ -22,6 +22,11 @@ namespace MvcEmlak.Controllers
         // GET: /Auth/Login
         public IActionResult Login()
         {
+            if (!String.IsNullOrEmpty(Request.Cookies["userID"]))
+            {
+                return RedirectToAction("Index", "Home");
+
+            }
             return View();
         }
 
@@ -44,6 +49,11 @@ namespace MvcEmlak.Controllers
                     Expires = DateTime.Now.AddDays(5)
 
                 });
+                HttpContext.Response.Cookies.Append("userID", foundUser.Id.ToString(), new Microsoft.AspNetCore.Http.CookieOptions()
+                {
+                    Expires = DateTime.Now.AddDays(5)
+
+                });
                 return RedirectToAction("Index", "Home");
 
             }
@@ -51,9 +61,22 @@ namespace MvcEmlak.Controllers
             return View();
         }
 
+        public IActionResult Logout()
+        {
+            HttpContext.Response.Cookies.Delete("userName");
+            HttpContext.Response.Cookies.Delete("userID");
+
+            return RedirectToAction("Index", "Home");
+        }
+
         // GET: /Auth/Register
         public IActionResult Register()
         {
+            if (!String.IsNullOrEmpty(Request.Cookies["userID"]))
+            {
+                return RedirectToAction("Index", "Home");
+
+            }
             return View();
         }
 
