@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcEmlak", "MvcEmlak\MvcEmlak.csproj", "{C45D662E-976A-42E4-B1F1-B4606EB97544}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C45D662E-976A-42E4-B1F1-B4606EB97544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C45D662E-976A-42E4-B1F1-B4606EB97544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C45D662E-976A-42E4-B1F1-B4606EB97544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C45D662E-976A-42E4-B1F1-B4606EB97544}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
